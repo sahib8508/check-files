@@ -67,17 +67,6 @@ def home():
 
 
 
-@app.route('/verify_student_roll', methods=['POST', 'OPTIONS'])
-def verify_student_roll_route():
-    # Handle preflight OPTIONS request for CORS
-    if request.method == 'OPTIONS':
-        response = jsonify({})
-        return response
-        
-    # For POST requests, use the student verification logic
-    return verify_student_route()
-
-# Renamed and updated student verification function
 
 @app.route('/mark_book_available', methods=['POST'])
 def mark_book_available():
